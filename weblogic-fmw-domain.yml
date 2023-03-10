@@ -5,10 +5,6 @@
     command: systemctl status "{{ item }}"
     with_items:
     - firewalld
-    - httpd
-    - vsftpd
-    - sshd
-    - postfix
     register: result
     ignore_errors: yes
   - name: showing report
